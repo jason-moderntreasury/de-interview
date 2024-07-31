@@ -47,7 +47,7 @@ export async function generateMetadata(
       stega: false,
     }),
     sanityFetch({
-      query: `*[_type == "post"] | order(date desc, _updatedAt desc) [0].visibility`,
+      query: `*[_type == "post"] | order(date desc) [0].visibility`,
     }),
   ]);
 
@@ -58,7 +58,7 @@ export async function generateMetadata(
     authors: post?.author?.name ? [{ name: post?.author?.name }] : [],
     title: post?.title,
     description: post?.excerpt,
-    robots: visibility ? "noindex" : null,
+    robots: !visibility ? "noindex" : null,
     openGraph: {
       images: ogImage ? [ogImage, ...previousImages] : previousImages,
     },
@@ -71,7 +71,6 @@ export default async function PostPage({ params }: Props) {
       query: postQuery,
       params,
     }),
-
     sanityFetch<SettingsQueryResult>({
       query: settingsQuery,
     }),
