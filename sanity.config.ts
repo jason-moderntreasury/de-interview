@@ -24,6 +24,9 @@ export default defineConfig({
   basePath: studioUrl,
   projectId,
   dataset,
+  scheduledPublishing: {
+    enabled: false,
+  },
   schema: {
     types: [
       // Singletons
