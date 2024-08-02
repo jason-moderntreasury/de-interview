@@ -12,14 +12,6 @@ This is a node.js application and you must have `node`, `npm`, and `git` install
 git clone git@github.com:jason-moderntreasury/de-interview.git
 ```
 
-### Checkout the `candidate` branch
-
-The candidate branch removes the need to have a Sanity API key environment variable.
-
-```
-git checkout candidate
-```
-
 ### Install node dependencies
 
 ```
@@ -32,4 +24,7 @@ npm i
 npm run dev
 ```
 
-You should now be able to view [http://localhost:3000](http://localhost:3000) in your browser.
+### Open the following routes in your browser:
+
+- Next.js front end: [http://localhost:3000](http://localhost:3000)
+- Sanity CMS editor: http://localhost:3000/studio (Use email/password login, credentials provided by Zoom host)
