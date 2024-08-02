@@ -22,6 +22,10 @@ export default defineType({
   icon: DocumentTextIcon,
   type: "document",
   fields: [
+    {
+      name: "visibility",
+      type: "boolean",
+    },
     defineField({
       name: "title",
       title: "Title",
@@ -96,10 +100,6 @@ export default defineType({
       type: "reference",
       to: [{ type: authorType.name }],
     }),
-    {
-      name: "visibility",
-      type: "boolean",
-    },
   ],
   preview: {
     select: {

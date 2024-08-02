@@ -74,6 +74,7 @@ export type Post = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
+  visibility?: boolean;
   title?: string;
   slug?: Slug;
   content?: Array<{
@@ -115,7 +116,6 @@ export type Post = {
     _weak?: boolean;
     [internalGroqTypeReferenceTo]?: "author";
   };
-  visibility?: boolean;
 };
 
 export type Author = {

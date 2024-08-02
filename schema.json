@@ -360,6 +360,13 @@
           "type": "string"
         }
       },
+      "visibility": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "boolean"
+        },
+        "optional": true
+      },
       "title": {
         "type": "objectAttribute",
         "value": {
@@ -671,13 +678,6 @@
             }
           },
           "dereferencesTo": "author"
-        },
-        "optional": true
-      },
-      "visibility": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "boolean"
         },
         "optional": true
       }
