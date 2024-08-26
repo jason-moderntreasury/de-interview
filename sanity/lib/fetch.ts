@@ -2,7 +2,7 @@ import type { ClientPerspective, QueryParams } from "next-sanity";
 import { draftMode } from "next/headers";
 
 import { client } from "@/sanity/lib/client";
-import { token } from "@/sanity/lib/token";
+// import { token } from "@/sanity/lib/token";
 
 /**
  * Used to fetch data in Server Components, it has built in support for handling Draft Mode and perspectives.
@@ -32,7 +32,7 @@ export async function sanityFetch<QueryResponse>({
       stega,
       perspective: "previewDrafts",
       // The token is required to fetch draft content
-      token,
+      // token,
       // The `previewDrafts` perspective isn't available on the API CDN
       useCdn: false,
       // And we can't cache the responses as it would slow down the live preview experience
